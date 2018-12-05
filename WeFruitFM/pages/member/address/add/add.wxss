@@ -1,0 +1,80 @@
+/* pages/address/add/add.wxss */
+
+.input-section {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.input-section:before {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.input-section:last-child:after {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.input-section:first-child:before {
+  display: none;
+}
+
+.label-before {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.input-after {
+  text-align: left;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+  color: #999;
+}
+
+.input-section-multi-line {
+  padding: 10px 15px;
+  margin: 3px;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.picker {
+  background-color: #fff;
+  text-align: left;
+}
+
+.input-textarea {
+  margin: 3px;
+  padding: 3px;
+  width: 98%;
+  height: 100px;
+  border: 1rpx solid #d9d9d9;
+  color: rgb(92, 89, 89);
+}
+
+.page-submit {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}

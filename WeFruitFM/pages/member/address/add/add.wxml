@@ -1,0 +1,49 @@
+<!--pages/address/add/add.wxml-->
+
+
+<form bindsubmit='submit'>
+  <view class='input-sections'>
+    <view class='input-section'>
+      <view class='label-before'>
+        <label>收货人：</label>
+      </view>
+      <view class='input-after'>
+        <input type="text" name="username" placeholder='请输入姓名' />
+      </view>
+    </view>
+    <view class='input-section'>
+      <view class='label-before'>
+        <label>联系电话：</label>
+      </view>
+      <view class='input-after'>
+        <input type="text" name="phone" placeholder='请输入手机号' />
+      </view>
+    </view>
+    <view class='input-section'>
+      <view class='label-before'>
+        <label>所在地区：</label>
+      </view>
+      <view class='input-after'>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{region[0]}} {{region[1]}} {{region[2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='input-section-multi-line'>
+    <view>
+      <label>详细地址：</label>
+    </view>
+    <view>
+      <textarea class='input-textarea' placeholder='街道 门牌号'></textarea>
+    </view>
+  </view>
+
+
+  <view class='page-submit'>
+    <button type="primary" form-type="submit">确定添加</button>
+  </view>
+
+</form>

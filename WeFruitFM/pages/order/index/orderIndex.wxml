@@ -1,0 +1,21 @@
+<!-- 上方tabBar 开始 -->
+<view class="swiper-tab">
+  <block wx:for="{{cateItems}}" wx:key="id">
+    <view class="swiper-tab-list {{currentTab==item.typeId ? 'on' : ''}}" 
+          data-current="{{item.typeId}}" bindtap="swichNav">
+          {{item.title}}
+    </view>
+  </block>
+</view>
+<!-- 上方tabBar 结束 -->
+
+
+<!-- 下方 内容 开始 -->
+<view wx:if="{{currentTab==children}}" class="swiper-box">
+   <block wx:for="{{cateItems[children-1].children}}" wx:key="id">
+      <view class="swiper-box_items">
+          <image src="{{item.img}}"></image>
+          <text>{{item.name}}</text>
+      </view>
+   </block>
+</view>

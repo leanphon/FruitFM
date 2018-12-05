@@ -1,21 +1,71 @@
-/**index.wxss**/
-.userinfo {
+.mall {
+  text-align: center;
+  margin: 5px;
+  font-family: SimHei;
+  font-size: 12px;
+  color: rgb(245, 163, 57);
+}
+
+.item-section {
+  padding: 10px 15px;
   display: flex;
-  flex-direction: column;
+  flex-flow: row;
   align-items: center;
+  height: 80px;
+  margin-bottom:10px; 
+  /*border: 1rpx solid #d9d9d9;*/
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.section-image {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.detail-image {
+  height: 80px;
+  width: 80px;
+  border: 1rpx solid #d9d9d9;
 }
 
-.usermotto {
-  margin-top: 200px;
+.section-detail {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+  display: flex;
+  flex-flow: column;
+}
+
+.detail-item {
+  -webkit-box-flex: 1;
+  -webkit-box-orient: vertical;
+}
+
+.detail-name {
+  font-family: SimHei;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(64, 191, 233);
+}
+
+.detail-desc {
+  font-family: SimHei;
+  font-size: 12px;
+  color: rgb(198, 228, 204);
+  padding-left: 3px;
+}
+
+.detail-price {
+  font-family: SimHei;
+  font-size: 14px;
+  color: rgb(230, 178, 236);
+  padding-left: 3px;
+}
+
+.detail-buy {
+  padding-left: 3px;
+  padding-top: 5px;
+}
+.button-buy {
+  width:100px;
 }

@@ -1,0 +1,17 @@
+<!--pages/address/index/addressIndex.wxml-->
+<view class='section'>
+  <scroll-view class='address-list'>
+    <block wx:for="{{[1,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]}}" wx:key="{{id}}">
+      <view>
+        <text>张数    18123235454</text>
+      </view>
+      <view>
+        <text>广西壮族值之前</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class='address-add'>
+    <button type="primary" bindtap='addNew'>新增收货地址</button>
+  </view>
+</view>

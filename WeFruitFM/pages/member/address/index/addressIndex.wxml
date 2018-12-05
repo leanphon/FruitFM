@@ -1,0 +1,36 @@
+<!--pages/address/index/addressIndex.wxml-->
+<view class='root'>
+  <scroll-view class='address-list'>
+    <block wx:for="{{[1,2,3,3,3,3]}}" wx:key="{{id}}">
+      <view class='section'>
+        <view class='user-name'>
+          <text>张数    18123235454</text>
+        </view>
+        <view class='user-address'>
+          <text>广西省桂林市永福县百寿镇</text>
+        </view>
+        <view class='user-operate'>
+          <view class='user-operate-tag'>
+            <label>
+              <checkbox checked='true' />默认地址
+            </label>
+          </view>
+          <view class='user-operate-item'>
+            <view bindtap='toModify' data-id='{{id}}'>
+              <image class='operate-img' src='/image/icon_eidt.png'></image>
+              <text style='padding-right:5px'>修改</text>
+            </view>
+            <view bindtap='toRemove' data-id='{{id}}'>
+              <image class='operate-img' src='/image/icon_remove.png'></image>
+              <text>删除</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class='address-add'>
+    <button type="primary" bindtap='addNew'>新增收货地址</button>
+  </view>
+</view>

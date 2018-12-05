@@ -1,0 +1,85 @@
+/* pages/address/index/addressIndex.wxss */
+.root{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.address-list {
+  height: 70%;
+}
+
+.address-add {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.section {
+  padding: 10px 15px;
+  position: relative;
+  align-items: center;
+}
+
+.section:after {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+
+.button {
+  background: lightgreen;
+}
+
+.user-name {
+  font-family: SimHei;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.user-address {
+  font-family: SimHei;
+  font-size: 13px;
+  color: grgb(206, 193, 193);
+  padding: 5px 10px;
+}
+
+.user-operate {
+  display: flex;
+  flex-flow: row;
+  padding: 5px;
+  margin-top: 5px;
+  font-family: SimHei;
+  font-size: 13px;
+  color: rgb(113, 112, 117);
+  align-items: right;
+}
+
+.user-operate-tag {
+  margin: 3px;
+  flex: 5;
+}
+
+.user-operate-item {
+  margin: 3px;
+  flex: 3;
+  display: flex;
+  flex-flow: row;
+}
+
+.operate-img {
+  width: 10px;
+  height: 10px;
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 3rpx;
+  height: 26rpx;
+  width: 26rpx;
+  margin-top: -7rpx;
+}

@@ -1,0 +1,42 @@
+<!--pages/member/member.wxml-->
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </block>
+</view>
+
+<view class="section">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <block wx:for="{{orderTypeList}}" wx:key="id">
+      <view class="page-order" data-typeId="{{item.typeId}}" bindtap='entryOrderDetail'>
+        <view class="counter">
+          <text>{{item.counter}}</text>
+        </view>
+        <view>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>
+
+
+<view class="section">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="receive-address" bindtap='entryReceiveAddress'>
+      <view class="">
+        <image class='receive-address-img' src='../../image/icon_component.png'> </image>
+      </view>
+      <view>
+        <text>收货地址</text>
+      </view>
+    </view>
+
+
+  </view>
+</view>

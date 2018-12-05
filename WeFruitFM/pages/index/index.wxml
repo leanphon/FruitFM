@@ -1,13 +1,24 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<scroll-view>
+  <view>
+  </view>
+  <view class='mall'>
+    <text>!———   果鲜生直供商城   ———!</text>
+  </view>
+  <view>
+    <block wx:for="{{[1, 2, 3,2,2,2,2,2]}}" wx:key="{{id}}">
+      <view class='item-section' data-goodId='{{id}}' bindtap='entryBuyGoods'>
+        <view class='section-image'>
+          <image class='detail-image' mode='aspectFill' src="../../image/icon_API.png"></image>
+        </view>
+        <view class='section-detail'>
+          <view class='detail-item detail-name'>广西桂林永福皇帝柑</view>
+          <view class='detail-item detail-desc'>味道甘甜</view>
+          <view class='detail-item detail-price'>4.5/斤</view>
+          <view class='detail-item detail-buy'>
+          <button type='' size='mini' class='button-buy'>立即购买</button>
+          </view>
+        </view>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+</scroll-view>
